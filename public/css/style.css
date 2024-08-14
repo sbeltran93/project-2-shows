@@ -1,4 +1,9 @@
 body {
-    background-color: rgb(241, 155, 180);
-    color:rgb(177, 114, 219);
+    background-color: rgb(206, 107, 135);
+}
+nav {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: aliceblue;
+
 }

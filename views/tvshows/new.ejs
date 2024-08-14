@@ -10,11 +10,19 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Tv Show to your Favorites</h1>
     <form action="/users/<%=user._id%>/tvshows" method="POST">
-        <label for="title">Search Others Shows:</label>
+        <label for="title">Title of Show:</label>
         <input type="text" name="title" id="title" />
-        <label for="isFullRecipe">Did you love it?</label>
-        <input type="checkbox" name="isFullRecipe" id="isFullRecipe" />
+        <label for="title">Rating:</label>
+        <input type="number" name="rating" id="rating" />
+        <label for="didYouLoveIt">Did you love it?</label>
+        <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
         <button type="submit">Add To My Shows</button>
       </form>
 </body>
 </html> 
+<style>
+        body {
+    background-color: rgb(153, 150, 165);
+    color:rgb(26, 22, 29);
+}
+</style>

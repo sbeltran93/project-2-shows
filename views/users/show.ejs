@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1><%= user.username %>'s Favorites to watch!</h1>
 
     <% user.showCase.forEach(item => { %>
@@ -19,3 +20,17 @@
 <a href="/users">Back to Community</a>
 </body>
 </html>
+<style>
+    body {
+        background-color: rgb(37, 5, 5);
+    }
+    li {
+    color: red;
+    }
+    h1 {
+        color: red;
+        text-align: center;
+        text-decoration: ;
+    }
+
+</style>

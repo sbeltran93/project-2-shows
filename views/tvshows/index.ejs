@@ -12,18 +12,27 @@
     <h1>Welcome to your Tv Shows</h1>
 
    <% foundShowCase.forEach(item => { %>
-    <li>
-    <%= item.title %> 
+    <li> Show:
+    <%= item.title %> Rating:  <%= item.rating %> A fan Favorite? <%= item.didYouLoveIt %>
    
-    <form action="/users/:userId/tvshows/<%=item._id%>?_method=DELETE" method="POST">
+    <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
 
     <button type="submit">Delete</button>
     <p><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
 </form>
     </li>
     <% }) %>
-
     <p><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
-
   </body>
 </html>
+<style>
+        body {
+    background-color: rgb(153, 150, 165);
+    color:rgb(26, 22, 29);
+}
+        h1 {
+        text-align: center;
+        color: rgb(3, 56, 56);
+    }
+
+</style>
