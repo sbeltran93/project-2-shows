@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit Show <%= item.title %> </h1>
+  <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
+    <label for="title">Edit Tv Show:</label>
+    <input type="text" name="title" id="title" value="<%=item.title%>" />
+    <button type="submit">Edit Tv Show</button>
+  </form>
+  <a href="/users/<%=user._id%>/tvshows/<%= item._id%>/edit">Back to shows</a>
+</body>
+</html>

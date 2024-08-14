@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Tv Show to your Favorites</h1>
+    <form action="/users/<%=user._id%>/tvshows" method="POST">
+        <label for="title">Search Others Shows:</label>
+        <input type="text" name="title" id="title" />
+        <label for="isFullRecipe">Did you love it?</label>
+        <input type="checkbox" name="isFullRecipe" id="isFullRecipe" />
+        <button type="submit">Add To My Shows</button>
+      </form>
+</body>
+</html> 

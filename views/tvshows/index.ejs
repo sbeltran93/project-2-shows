@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <title>My Pantry</title>
+  </head>
+  <body>
+ <%- include('../partials/_navbar.ejs') %>
+
+    <h1>Welcome to your Tv Shows</h1>
+
+   <% foundShowCase.forEach(item => { %>
+    <li>
+    <%= item.title %> 
+   
+    <form action="/users/:userId/tvshows/<%=item._id%>?_method=DELETE" method="POST">
+
+    <button type="submit">Delete</button>
+    <p><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
+</form>
+    </li>
+    <% }) %>
+
+    <p><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
+
+  </body>
+</html>
