@@ -9,6 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= user.username %>'s Favorites to watch!</h1>
+    <div class="backpage"><a href="/users">Back to Community</a></div>
 
     <% user.showCase.forEach(item => { %>
         <li> <%= item.title %>
@@ -18,22 +19,38 @@
 
 
 
-<a href="/users">Back to Community</a>
+
+<div class="img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a85lZWPIWYD4XUsbhfWOPUA_-Mvt1k1dLeAoZ2jXs9Ffd92oZEOUPYCI4OZZMEV-FNA&usqp=CAU" alt="community page photo the simpsons"></div>
+
 </body>
 </html>
 <style>
-    body {
-        background-color: #c8d7f3;
-    }
+    body{
+        background-color: rgb(37, 36, 36);
+    }    
     li { 
-    color: #00246b;
+    color: #c9cfda;
     display: flex;
-    justify-content:stretch;
+    padding-left: 2%;
+    
     }
     h1 {
-        color: #00246b;
+        color: #e3e7ed;
         text-align: center;
-        text-decoration:underline 
-    }
+        text-decoration:underline;
+        padding-top: 1%; 
 
+
+    }
+    .img1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 20%;
+        height: 250px;
+    
+    }
+    .backpage {
+        text-align: center;
+    }
 </style>

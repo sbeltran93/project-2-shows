@@ -11,6 +11,7 @@
 
     <h1>Welcome to your Tv Shows</h1>
 
+
    <% foundShowCase.forEach(item => { %>
 
 
@@ -20,20 +21,32 @@
     </span>
     <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
 
+    <div class="container2">  
+    <div class="box2">      
     <button type="submit">Delete</button>
     <p class="editbutton"><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
 </form>
-    <div class="img1"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXcWRLBkhc6qpw3n50v7AO0ve5aWnxQ2ss9g&usqp=CAU">
-    </div>
-
-    
+</div>
+</div>
     <% }) %>
     <p class="addbutton"><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
+
+
+        <div class="container">
+        <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXcWRLBkhc6qpw3n50v7AO0ve5aWnxQ2ss9g&usqp=CAU" alt="show page vampire diaries">
+        </div>
+    <div class="box"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-QUwPOnPl4SJQ3qKrMQ33yinWRXSoCusz9g&usqp=CAU" alt="showpage the office">
+        </div>
+    </div>
   </body>
 </html>
 <style>
         body {
     background-color: rgb(92, 90, 100);
+    margin: 0px;
+    padding: 0px;
 }
     h1 {
     text-align: center;
@@ -52,6 +65,7 @@
     }
     #show {
         color: white;
+        padding-left: 3%;
         display: flex;;
         
     }
@@ -62,17 +76,18 @@
     .editbutton {
         text-align: center;
     }
-    .img1 {
-        display: flex;
-        justify-content: flex-end;
-        padding-bottom: 11%;
-        padding-right: 3%;
-
+    .container {
+        display: inline-flex;
     }
-    .img2 {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 3%;
-
+    .box {
+        width: 50%;
+    
     }
+    .container {
+        float: left;
+    }
+    .box {
+        width: 50%;
+    }
+    
 </style>

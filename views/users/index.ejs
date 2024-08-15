@@ -12,11 +12,30 @@
 
 
     <% users.forEach((user) => { %>
-        <li>
-        <a href="/users/<%= user._id%> "> <%= user.username %></a>  
-        </li>
+        <ul>
+       <div class="userlink"> <a href="/users/<%= user._id%> "> <%= user.username %></a>  </div>
+        </ul>
     
     <% }) %>
 
 </body>
 </html>
+
+<style>
+    body{
+        background-color: rgb(37, 36, 36);
+    }
+    
+    a {
+        color: rgb(236, 58, 58);
+        padding-left: 1%;
+    }
+    h1 {
+        color: rgb(236, 58, 58);
+        text-align: center;
+        padding-top: 2%;
+    }
+    .userlink {
+        padding-top: 1%;
+    }
+</style>
