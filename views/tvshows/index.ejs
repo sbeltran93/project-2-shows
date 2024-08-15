@@ -12,17 +12,22 @@
     <h1>Welcome to your Tv Shows</h1>
 
    <% foundShowCase.forEach(item => { %>
-    <li> Show:
-    <%= item.title %> Rating:  <%= item.rating %> A fan Favorite? <%= item.didYouLoveIt %>
-   
+
+
+
+    <span id="show"> Show:
+    <%= item.title %></span> <span id="fav">A fan Favorite? <%= item.didYouLoveIt %></span> <span id="rating"> Rating: <%= item.rating %></span>
+    </span>
     <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
 
     <button type="submit">Delete</button>
     <p><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
 </form>
-    </li>
+
+
+    
     <% }) %>
-    <p><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
+    <p class="addbutton"><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
   </body>
 </html>
 <style>
@@ -31,10 +36,34 @@
 }
     h1 {
     text-align: center;
-    color: rgb(3, 56, 56);
+    color: rgb(215, 115, 8);
 }
     li {
-        color: rgb(85, 14, 150);
+        text-align: center;
+        color: rgb(245, 242, 238);
     }
+    button {
 
+        display: block;
+        margin: auto;
+        
+    }
+    #rating {
+        color: white;
+    
+    }
+    #show {
+        color: white;
+        
+    }
+    #fav {
+        color: white;
+        padding-top: 1mm;
+        padding-bottom: 1mm;
+     
+    }
+    .addbutton {
+        text-align: center;
+        padding-top: 30%;
+    }
 </style>
