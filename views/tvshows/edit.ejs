@@ -12,8 +12,8 @@
   <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
     <label for="title">Edit Title</label>
     <input type="text" name="title" id="title" value="<%=item.title%>" />
-    <label for="comment">New opinions about the show?</label>
-    <input type="text" name="comment" id="comment"/>
+    <label for="comments">New opinions about the show?</label>
+    <input type="text" name="comments" id="comments"/>
     <label for="title">Edit Rating:</label>
     <input type="number" name="rating" id="rating" />
     <label for="didYouLoveIt">Did you love it or not?</label>
@@ -34,24 +34,26 @@
     color:rgb(26, 22, 29);
 }
     h1 {
-        color: #f6f6f9;
+        color: rgb(115, 195, 205);
         text-align: center;
-        padding-top: 20px;
+        padding-top: 4%;
     }
     form {  
         text-align: center;
-        color: rgb(237, 109, 62);
+        padding-top: 2%;
+        color: rgb(115, 195, 205);
 
     }
     div {
         display: flex;
         justify-content: center;
-        padding-top: 10%;
+        padding-top: 8%;
     }
     a {
         display: flex;
         justify-content: center;
         padding-top: 1%;
+        color: rgb(115, 195, 205);
     }
     img {
         height: 300px;
@@ -60,5 +62,6 @@
     }
     .editbutton {
         padding-top: 5%;
+        color: r;
     }
 </style>

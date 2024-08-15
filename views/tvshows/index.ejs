@@ -13,17 +13,16 @@
 
 
    <% foundShowCase.forEach(item => { %>
-
-
-
-    <span id="show"> Show:
-    <%= item.title %>A fan Favorite? <%= item.didYouLoveIt %> Rating: <%= item.rating %>
+    <span id="show"> 
+        Show: <%=item.title%>       A fan Favorite?  <%=item.didYouLoveIt%>      Rating: <%=item.rating%>    Review: <%=item.comments%>
     </span>
     <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
 
     <div class="container2">  
-    <div class="box2">      
+    <div class="box2">  
+    <div class="deletebutton">       
     <button type="submit">Delete</button>
+    </div> 
     </div>  
     <div class="box2">
     <p class="editbutton"><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
@@ -78,11 +77,15 @@
     .editbutton {
         text-align: center;
     }
+    .deletebutton {
+        color: rgb(215, 115, 8);
+    }
     .container {
         display: inline-flex;
     }
     .box {
         width: 50%;
+        
     
     }
     .container {

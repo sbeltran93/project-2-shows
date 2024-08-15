@@ -12,7 +12,7 @@
     <div class="backpage"><a href="/users">Back to Community</a></div>
 
     <% user.showCase.forEach(item => { %>
-        <li> <%= item.title %>
+        <li> <%= item.title %> , <%=item.comments%>
        
         </li>
        <% }) %>
@@ -20,7 +20,7 @@
 
 
 
-<div class="img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a85lZWPIWYD4XUsbhfWOPUA_-Mvt1k1dLeAoZ2jXs9Ffd92oZEOUPYCI4OZZMEV-FNA&usqp=CAU" alt="community page photo the simpsons"></div>
+<div class="img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a85lZWPIWYD4XUsbhfWOPUA_-Mvt1k1dLeAoZ2jXs9Ffd92oZEOUPYCI4OZZMEV-FNA&usqp=CAU" alt="community page the simpsons"></div>
 
 </body>
 </html>
@@ -29,13 +29,15 @@
         background-color: rgb(37, 36, 36);
     }    
     li { 
-    color: #c9cfda;
+    color: rgb(226, 197, 34);
+    font-size: 18px;
     display: flex;
-    padding-left: 2%;
+    padding-left: 6%;
+    padding-top: 1%;
     
     }
     h1 {
-        color: #e3e7ed;
+        color: rgb(226, 197, 34);
         text-align: center;
         text-decoration:underline;
         padding-top: 1%; 
@@ -46,11 +48,19 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        padding-top: 20%;
+        padding-top: 15%;
         height: 250px;
+        border-radius: 6px;
     
     }
     .backpage {
         text-align: center;
     }
+    img {
+        height: 300px;
+    }
+    a {
+        color: rgb(226, 197, 34);
+    }
+
 </style>
