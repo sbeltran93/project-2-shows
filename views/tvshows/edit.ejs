@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css"/>
-    <title>Document</title>
+    <title>Edit Show</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
@@ -12,12 +12,19 @@
   <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
     <label for="title">Edit Title</label>
     <input type="text" name="title" id="title" value="<%=item.title%>" />
+    <label for="comment">New opinions about the show?</label>
+    <input type="text" name="comment" id="comment"/>
     <label for="title">Edit Rating:</label>
     <input type="number" name="rating" id="rating" />
-    <button type="submit">Edit Tv Show</button>
     <label for="didYouLoveIt">Did you love it or not?</label>
-        <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
+    <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
+    <div class="editbutton">
+    <button type="submit">Edit Tv Show</button>
+    </div>
   </form>
+    <div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTmiWF39kpyZlmiuAZ1yoy8CPHthvBSsQoQ&usqp=CAU">
+    </div>
   <a href="/users/<%=user._id%>/tvshows/">Back to shows</a>
 </body>
 </html>
@@ -33,6 +40,25 @@
     }
     form {  
         text-align: center;
+        color: rgb(237, 109, 62);
 
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
+    img {
+        height: 300px;
+        width: 450px;
+        border-radius: 1%;
+    }
+    .editbutton {
+        padding-top: 5%;
     }
 </style>

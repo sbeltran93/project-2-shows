@@ -24,6 +24,8 @@
     <div class="container2">  
     <div class="box2">      
     <button type="submit">Delete</button>
+    </div>  
+    <div class="box2">
     <p class="editbutton"><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
 </form>
 </div>
@@ -89,5 +91,16 @@
     .box {
         width: 50%;
     }
-    
+    .container2 {
+        display: inline-flex;
+    }
+    .box2 {
+        width: 50%;
+    }
+    .container2 {
+        float: right;
+    }
+    .box2 {
+        width: 50%;
+    }
 </style>
