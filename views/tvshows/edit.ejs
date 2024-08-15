@@ -8,18 +8,18 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit Show <%= item.title %> </h1>
+    <h1>Edit <%= item.title %> </h1>
   <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
     <label for="title">Edit Tv Show:</label>
     <input type="text" name="title" id="title" value="<%=item.title%>" />
     <button type="submit">Edit Tv Show</button>
   </form>
-  <a href="/users/<%=user._id%>/tvshows/<%= item._id%>/edit">Back to shows</a>
+  <a href="/users/<%=user._id%>/tvshows/">Back to shows</a>
 </body>
 </html>
 <style>
         body {
-    background-color: rgb(153, 150, 165);
+    background-color: rgb(92, 90, 100);
     color:rgb(26, 22, 29);
 }
     h1 {
