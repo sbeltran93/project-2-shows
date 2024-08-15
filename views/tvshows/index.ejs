@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css"/>
-    <title>My Pantry</title>
+    <title>My Shows</title>
   </head>
   <body>
  <%- include('../partials/_navbar.ejs') %>
@@ -16,14 +16,15 @@
 
 
     <span id="show"> Show:
-    <%= item.title %></span> <span id="fav">A fan Favorite? <%= item.didYouLoveIt %></span> <span id="rating"> Rating: <%= item.rating %></span>
+    <%= item.title %>A fan Favorite? <%= item.didYouLoveIt %> Rating: <%= item.rating %>
     </span>
     <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
 
     <button type="submit">Delete</button>
-    <p><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
+    <p class="editbutton"><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
 </form>
-
+    <div class="img1"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXcWRLBkhc6qpw3n50v7AO0ve5aWnxQ2ss9g&usqp=CAU">
+    </div>
 
     
     <% }) %>
@@ -36,6 +37,7 @@
 }
     h1 {
     text-align: center;
+    padding-top: 1%;
     color: rgb(215, 115, 8);
 }
     li {
@@ -48,22 +50,29 @@
         margin: auto;
         
     }
-    #rating {
-        color: white;
-    
-    }
     #show {
         color: white;
+        display: flex;;
         
     }
-    #fav {
-        color: white;
-        padding-top: 1mm;
-        padding-bottom: 1mm;
-     
-    }
     .addbutton {
+        text-align: center; 
+        padding-top: 6%;
+    }
+    .editbutton {
         text-align: center;
-        padding-top: 30%;
+    }
+    .img1 {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 11%;
+        padding-right: 3%;
+
+    }
+    .img2 {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3%;
+
     }
 </style>

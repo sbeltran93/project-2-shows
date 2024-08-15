@@ -10,9 +10,13 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit <%= item.title %> </h1>
   <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
-    <label for="title">Edit Tv Show:</label>
+    <label for="title">Edit Title</label>
     <input type="text" name="title" id="title" value="<%=item.title%>" />
+    <label for="title">Edit Rating:</label>
+    <input type="number" name="rating" id="rating" />
     <button type="submit">Edit Tv Show</button>
+    <label for="didYouLoveIt">Did you love it or not?</label>
+        <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
   </form>
   <a href="/users/<%=user._id%>/tvshows/">Back to shows</a>
 </body>
@@ -24,5 +28,9 @@
 }
     h1 {
         color: #2F3C7E;
+    }
+    form {  
+        text-align: center;
+
     }
 </style>
