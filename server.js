@@ -39,6 +39,7 @@ app.use('/auth', authController);
 app.use(isSignedIn);
 app.use('/users', usersController);
 app.use('/users/:userId/tvshows',tvshowsController);
+app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
