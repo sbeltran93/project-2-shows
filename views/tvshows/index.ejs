@@ -1,109 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>My Shows</title>
   </head>
   <body>
- <%- include('../partials/_navbar.ejs') %>
+    <%- include('../partials/_navbar.ejs') %>
 
     <h1>Welcome to your Tv Shows</h1>
 
-
-   <% foundShowCase.forEach(item => { %>
-    <span id="show"> 
-        Show: <%=item.title%>       A fan Favorite?  <%=item.didYouLoveIt%>      Rating: <%=item.rating%>    Review: <%=item.comments%>
-    </span>
-    <form action="/users/<%= user._id %>/tvshows/<%=item._id%>?_method=DELETE" method="POST">
-
-    <div class="container2">  
-    <div class="box2">  
-    <div class="deletebutton">       
-    <button type="submit">Delete</button>
-    </div> 
-    </div>  
-    <div class="box2">
-    <p class="editbutton"><a href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit">Edit</a> </p>
-</form>
-</div>
-</div>
-    <% }) %>
-    <p class="addbutton"><a href="/users/<%= user._id%>/tvshows/new">Add New Tv Show!</a></p>
-
-
-        <div class="container">
-        <div class="box">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXcWRLBkhc6qpw3n50v7AO0ve5aWnxQ2ss9g&usqp=CAU" alt="show page vampire diaries">
+    <ul>
+      <% foundShowCase.forEach(item => { %>
+      <li class="show">
+        Show: <%= item.title %>, A fan Favorite? <%= item.didYouLoveIt %>,
+        Rating: <%= item.rating %>, Review: <%= item.comments %>
+        <div class="action-buttons">
+          <a
+            href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit"
+            class="edit-button"
+            >Edit</a
+          >
+          <form
+            action="/users/<%= user._id %>/tvshows/<%= item._id %>?_method=DELETE"
+            method="POST"
+            class="delete-form"
+          >
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
         </div>
-    <div class="box"> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-QUwPOnPl4SJQ3qKrMQ33yinWRXSoCusz9g&usqp=CAU" alt="showpage the office">
-        </div>
+      </li>
+      <% }); %>
+    </ul>
+    <p class="addbutton">
+      <a href="/users/<%= user._id %>/tvshows/new">Add New Tv Show!</a>
+    </p>
+
+    <div class="container">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXcWRLBkhc6qpw3n50v7AO0ve5aWnxQ2ss9g&usqp=CAU"
+        alt="show page vampire diaries"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-QUwPOnPl4SJQ3qKrMQ33yinWRXSoCusz9g&usqp=CAU"
+        alt="showpage the office"
+      />
     </div>
   </body>
 </html>
 <style>
-        body {
+  body {
     background-color: rgb(92, 90, 100);
     margin: 0px;
     padding: 0px;
-}
-    h1 {
+  }
+  h1 {
     text-align: center;
     padding-top: 1%;
+    color: rgb(94, 192, 81);
+  }
+  li {
+    text-align: center;
+    color: rgb(245, 242, 238);
+  }
+  button {
+    display: block;
+    margin: auto;
+  }
+  #show {
+    color: white;
+    padding-left: 3%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .addbutton {
+    text-align: center;
+    padding-top: 2%;
+  }
+  .editbutton {
+    text-align: center;
+  }
+  .deletebutton {
     color: rgb(215, 115, 8);
-}
-    li {
-        text-align: center;
-        color: rgb(245, 242, 238);
-    }
-    button {
-
-        display: block;
-        margin: auto;
-        
-    }
-    #show {
-        color: white;
-        padding-left: 3%;
-        display: flex;;
-        
-    }
-    .addbutton {
-        text-align: center; 
-        padding-top: 6%;
-    }
-    .editbutton {
-        text-align: center;
-    }
-    .deletebutton {
-        color: rgb(215, 115, 8);
-    }
-    .container {
-        display: inline-flex;
-    }
-    .box {
-        width: 50%;
-        
-    
-    }
-    .container {
-        float: left;
-    }
-    .box {
-        width: 50%;
-    }
-    .container2 {
-        display: inline-flex;
-    }
-    .box2 {
-        width: 50%;
-    }
-    .container2 {
-        float: right;
-    }
-    .box2 {
-        width: 50%;
-    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+  }
+  img {
+    transform: scale(0.75);
+  }
+  a {
+    color: rgb(94, 192, 81);
+  }
+  .action-buttons {
+    display: flex;
+    align-items: baseline ;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+  button {
+    color: rgb(94, 192, 81);
+  }
 </style>

@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Users Page in Community</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= user.username %>'s Favorites to watch!</h1>
     <div class="backpage"><a href="/users">Back to Community</a></div>
 
     <% user.showCase.forEach(item => { %>
-        <li> <%= item.title %> , <%=item.comments%>
-       
-        </li>
-       <% }) %>
+    <li>
+      <%= item.title %>, Review: <%=item.comments%>, Rating #<%=
+      item.rating %>
+    </li>
+    <% }) %>
 
-
-
-
-<div class="img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a85lZWPIWYD4XUsbhfWOPUA_-Mvt1k1dLeAoZ2jXs9Ffd92oZEOUPYCI4OZZMEV-FNA&usqp=CAU" alt="community page the simpsons"></div>
-
-</body>
+    <div class="img1">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a85lZWPIWYD4XUsbhfWOPUA_-Mvt1k1dLeAoZ2jXs9Ffd92oZEOUPYCI4OZZMEV-FNA&usqp=CAU"
+        alt="community page the simpsons"
+      />
+    </div>
+  </body>
 </html>
 <style>
-    body{
-        background-color: rgb(37, 36, 36);
-    }    
-    li { 
+  body {
+    background-color: rgb(37, 36, 36);
+  }
+  li {
     color: rgb(226, 197, 34);
     font-size: 18px;
-    display: flex;
-    padding-left: 6%;
+    text-align: center;
+    padding-top: 2%;
+  }
+  h1 {
+    color: rgb(226, 197, 34);
+    text-align: center;
+    text-decoration: underline;
     padding-top: 1%;
-    
-    }
-    h1 {
-        color: rgb(226, 197, 34);
-        text-align: center;
-        text-decoration:underline;
-        padding-top: 1%; 
-
-
-    }
-    .img1 {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        padding-top: 15%;
-        height: 250px;
-        border-radius: 6px;
-    
-    }
-    .backpage {
-        text-align: center;
-    }
-    img {
-        height: 300px;
-    }
-    a {
-        color: rgb(226, 197, 34);
-    }
-
+  }
+  .img1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 15%;
+    height: 250px;
+    border-radius: 6px;
+  }
+  .backpage {
+    text-align: center;
+  }
+  img {
+    height: 300px;
+  }
+  a {
+    color: rgb(226, 197, 34);
+  }
 </style>

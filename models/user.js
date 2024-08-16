@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const tvshowSchema = new mongoose.Schema({
-  title: { type: String, required: true},
-  rating: { type: Number, required: true},
+  title: { type: String, required: true },
+  rating: { type: Number, required: true },
   didYouLoveIt: { type: Boolean, required: false },
-  comments: [{type: String, required: true}]
+  comments: [{ type: String, required: true }],
 });
 const userSchema = mongoose.Schema({
   username: {
@@ -15,9 +15,9 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  showCase: [tvshowSchema]
+  showCase: [tvshowSchema],
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;

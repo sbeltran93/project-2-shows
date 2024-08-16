@@ -1,25 +1,25 @@
 <nav>
-    <a href="/">Home</a>
-    <% if(user) { %>
-      <a href="/users/<%=user._id%>/tvshows">View my Shows</a>
-      <a href="/users">Explore Our Community</a>
-      <a href="/auth/sign-out">Sign Out</a>
+  <a href="/">Home</a>
+  <% if(user) { %>
+  <a href="/users/<%=user._id%>/tvshows">View my Shows</a>
+  <a href="/users">Explore Our Community</a>
+  <a href="/auth/sign-out">Sign Out</a>
 
-    <% } else { %>
-      <a href="/auth/sign-in">Sign In</a>
-      <a href="/auth/sign-up">Sign Up</a>
-    <% } %>
-  </nav>
-  <style>
-    nav {
+  <% } else { %>
+  <a href="/auth/sign-in">Sign In</a>
+  <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
+</nav>
+<style>
+  nav {
     display: flex;
-    justify-content: space-around;    
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    justify-content: space-around;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     color: rgb(86, 173, 128);
-}
-    a {
+  }
+  a {
     color: rgb(223, 117, 18);
     padding-top: 1%;
-}
-  </style>
+  }
+</style>

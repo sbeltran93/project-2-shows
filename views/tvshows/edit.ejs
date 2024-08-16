@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Edit Show</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= item.title %> </h1>
-  <form action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT" method="POST">
-    <label for="title">Edit Title</label>
-    <input type="text" name="title" id="title" value="<%=item.title%>" />
-    <label for="comments">New opinions about the show?</label>
-    <input type="text" name="comments" id="comments"/>
-    <label for="title">Edit Rating:</label>
-    <input type="number" name="rating" id="rating" />
-    <label for="didYouLoveIt">Did you love it or not?</label>
-    <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
-    <div class="editbutton">
-    <button type="submit">Edit Tv Show</button>
-    </div>
-  </form>
+    <h1>Edit <%= item.title %></h1>
+    <form
+      action="/users/<%=user._id%>/tvshows/<%= item._id%>?_method=PUT"
+      method="POST"
+    >
+      <label for="title">Edit Title</label>
+      <input type="text" name="title" id="title" value="<%=item.title%>" />
+      <label for="comments">New opinions about the show?</label>
+      <input type="text" name="comments" id="comments" />
+      <label for="title">Edit Rating:</label>
+      <input type="number" name="rating" id="rating" />
+      <label for="didYouLoveIt">Did you love it or not?</label>
+      <input type="checkbox" name="didYouLoveIt" id="didYouLoveIt" />
+      <div class="editbutton">
+        <button type="submit">Edit Tv Show</button>
+      </div>
+    </form>
     <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTmiWF39kpyZlmiuAZ1yoy8CPHthvBSsQoQ&usqp=CAU">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTmiWF39kpyZlmiuAZ1yoy8CPHthvBSsQoQ&usqp=CAU"
+      />
     </div>
-  <a href="/users/<%=user._id%>/tvshows/">Back to shows</a>
-</body>
+    <a href="/users/<%=user._id%>/tvshows/">Back to shows</a>
+  </body>
 </html>
 <style>
-        body {
+  body {
     background-color: rgb(92, 90, 100);
-    color:rgb(26, 22, 29);
-}
-    h1 {
-        color: rgb(115, 195, 205);
-        text-align: center;
-        padding-top: 4%;
-    }
-    form {  
-        text-align: center;
-        padding-top: 2%;
-        color: rgb(115, 195, 205);
-
-    }
-    div {
-        display: flex;
-        justify-content: center;
-        padding-top: 8%;
-    }
-    a {
-        display: flex;
-        justify-content: center;
-        padding-top: 1%;
-        color: rgb(115, 195, 205);
-    }
-    img {
-        height: 300px;
-        width: 450px;
-        border-radius: 1%;
-    }
-    .editbutton {
-        padding-top: 5%;
-        color: r;
-    }
+    color: rgb(26, 22, 29);
+  }
+  h1 {
+    color: rgb(115, 195, 205);
+    text-align: center;
+    padding-top: 4%;
+  }
+  form {
+    text-align: center;
+    padding-top: 2%;
+    color: rgb(115, 195, 205);
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    color: rgb(115, 195, 205);
+  }
+  img {
+    height: 300px;
+    width: 450px;
+    border-radius: 1%;
+  }
+  .editbutton {
+    padding-top: 5%;
+    color: r;
+  }
 </style>

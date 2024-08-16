@@ -1,12 +1,7 @@
-
-
 const express = require('express');
 const router = express.Router();
 
 const User = require('../models/user.js');
-
-
-// router logic will go here - will be built later on in the lab
 
 module.exports = router;
 
@@ -14,7 +9,6 @@ module.exports = router;
 router.get('/', async (req, res) => {
         const userId = req.session.user._id;
         const user = await User.findById(userId);
-        console.log('user', user.showCase)
         res.render('tvshows/index.ejs', {   
             foundShowCase: user.showCase
         })
@@ -32,15 +26,11 @@ router.post('/', async (req, res)=> {
         req.body.didYouLoveIt = true :
         req.body.didYouLoveIt = false
         req.body.rating = parseInt(req.body.rating)
-        console.log(typeof req.body.rating)
         const foundUser = await User.findById(req.session.user._id)
         foundUser.showCase.push(req.body)
-        console.log(foundUser)
         await foundUser.save()
-        console.log('done')
         res.redirect(`/users/${foundUser._id}/tvshows`)
       } catch (error) {
-        console.log(error)
       }
   })
 

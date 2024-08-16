@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <title>Sign Up</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
     <h1>Welcome!</h1>
-  <h2>Create a new account!</h2>
-  
-  <form action="/auth/sign-up" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <label for="confirmPassword">Confirm Password:</label>
-    <input 
-      type="password"
-      name="confirmPassword"
-      id="confirmPassword"
-      required 
-    />
-    <div class="signup button">
-    <button type="submit">Sign up</button></div>
-    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf--zwg9sdp43R0vHz6BLnZI5SM_Pp0gGCkw&usqp=CAU" alt="signup photo tv show sign"></div>
-    <p><a href="/auth/sign-in">Already have an account?</a></p>
+    <h2>Create a new account!</h2>
 
-  </form>
-</body>
+    <form action="/auth/sign-up" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required />
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        required
+      />
+      <div class="signup button">
+        <button type="submit">Sign up</button>
+      </div>
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf--zwg9sdp43R0vHz6BLnZI5SM_Pp0gGCkw&usqp=CAU"
+          alt="signup photo tv show sign"
+        />
+      </div>
+      <p><a href="/auth/sign-in">Already have an account?</a></p>
+    </form>
+  </body>
 </html>
 <style>
-
-    div {
-        display: flex;
-        justify-content: center;
-        padding-top: 4%;
-    }
-    img {
-        width: 500px;
-        height: 300px;
-    }
-    h1 {
-        text-align: center;
-        padding-top: 3%;
-    }
-    h2 {
-        text-align: center;
-    }
-    form {
-        text-align: center;
-        padding-top: 3%;
-    }
-    body {
-        background-color: rgb(216, 195, 221);
-    }
-    .signup button {
-        color: rgb(167, 39, 167);
-    }
+  div {
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+  }
+  img {
+    width: 500px;
+    height: 300px;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 3%;
+  }
+  h2 {
+    text-align: center;
+  }
+  form {
+    text-align: center;
+    padding-top: 3%;
+  }
+  body {
+    background-color: rgb(216, 195, 221);
+  }
+  .signup button {
+    color: rgb(167, 39, 167);
+  }
 </style>

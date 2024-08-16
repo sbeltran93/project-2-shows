@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <title>Sign In</title>
-</head>
-<body>
-  <h1>Welcome back! Sign in</h1>
-  <form action="/auth/sign-in" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <div class="signin button">
-    <button type="submit">Sign in</button>
-    </div>
-    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShE5IO1V_JAuyyM1GknXteeT-JQXRD971M1A&usqp=CAU" alt="signin photo 2 people with tv heads"> </div>
-    <p><a href="/auth/sign-up">Create an account</a></p>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <h1>Welcome back! Sign in</h1>
+    <form action="/auth/sign-in" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required />
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required />
+      <div class="signin button">
+        <button type="submit">Sign in</button>
+      </div>
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShE5IO1V_JAuyyM1GknXteeT-JQXRD971M1A&usqp=CAU"
+          alt="signin photo 2 people with tv heads"
+        />
+      </div>
+      <p><a href="/auth/sign-up">Create an account</a></p>
+    </form>
+  </body>
 </html>
 <style>
-    body {
-        background-color: beige;
-    }
-    form {
-        text-align: center;
-        padding-top: 4%;
-        
-    }
-    h1 {
-        text-align: center;
-        padding-top: 5%;
-    }
-    div {
-        display: flex; 
-        justify-content: center; 
-
-    }
-    img {
-        padding-top: 6%;
-        width: 300px;
-        height: 300px;
-    }
-    a {
-        color: rgb(224, 17, 17);
-    }
-    .signin button {
-       color: rgb(224, 17, 17); 
-       margin-top: 2%;
-    }
+  body {
+    background-color: beige;
+  }
+  form {
+    text-align: center;
+    padding-top: 4%;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 5%;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    padding-top: 6%;
+    width: 300px;
+    height: 300px;
+  }
+  a {
+    color: rgb(224, 17, 17);
+  }
+  .signin button {
+    color: rgb(224, 17, 17);
+    margin-top: 2%;
+  }
 </style>
