@@ -14,4 +14,7 @@ The name of my app is Tv Shows, I named my app Shout as listed in the welcoming 
 Stretch goals I would like for this app is to be able to become friends with other users, comment on other users reviews (comment section?), a user would able to add a picture each review. 
 
 
+Technologies used:
+javascript, css, ejs, html, mongobd, mongoose, json, express
 
+Researched on google, webmd, mongoose website, shecodes, youtube, excalidraw
