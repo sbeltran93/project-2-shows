@@ -16,9 +16,12 @@ const port = process.env.PORT ? process.env.PORT : "3000";
 
 mongoose.connect(process.env.MONGODB_URI);
 
-mongoose.connection.once("open", () => {});
+mongoose.connection.once("open", () => {
+    console.log('MongoDB Running')
+});
 
 mongoose.connection.on("connected", () => {});
+console.log('MongoDB good to go');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
