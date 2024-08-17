@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -15,7 +14,8 @@
     <ul>
       <% foundShowCase.forEach(item => { %>
       <li class="show">
-        Show: <%= item.title %>, Rating: <%= item.rating %>, Review: <%= item.comments %>
+        Show: <%= item.title %>, Rating: <%= item.rating %>, Review: <%=
+        item.comments %>
         <div class="action-buttons">
           <a
             href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit"
@@ -65,8 +65,8 @@
   li {
     text-align: center;
     color: rgb(245, 242, 238);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
   button {
     display: block;
@@ -105,7 +105,7 @@
   }
   .action-buttons {
     display: flex;
-    align-items: baseline ;
+    align-items: baseline;
     justify-content: center;
     padding-bottom: 5px;
   }

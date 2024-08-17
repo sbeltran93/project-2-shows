@@ -16,7 +16,12 @@
       <label for="title">Edit Title</label>
       <input type="text" name="title" id="title" value="<%=item.title%>" />
       <label for="comments">New opinions about the show?</label>
-      <input type="text" name="comments" id="comments" value="<%=item.comments%>" />
+      <input
+        type="text"
+        name="comments"
+        id="comments"
+        value="<%=item.comments%>"
+      />
       <label for="title">Edit Rating:</label>
       <input type="number" name="rating" id="rating" value="<%=item.rating%>" />
       <div class="edit button">
@@ -69,6 +74,6 @@
   .edit button {
     color: rgb(115, 195, 205);
     font-family: fantasy;
-    font-size: 16px;    
+    font-size: 16px;
   }
 </style>
