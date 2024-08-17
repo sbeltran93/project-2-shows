@@ -15,8 +15,7 @@
     <ul>
       <% foundShowCase.forEach(item => { %>
       <li class="show">
-        Show: <%= item.title %>, A fan Favorite? <%= item.didYouLoveIt %>,
-        Rating: <%= item.rating %>, Review: <%= item.comments %>
+        Show: <%= item.title %>, Rating: <%= item.rating %>, Review: <%= item.comments %>
         <div class="action-buttons">
           <a
             href="/users/<%= user._id %>/tvshows/<%= item._id %>/edit"

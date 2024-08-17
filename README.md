@@ -17,4 +17,6 @@ Stretch goals I would like for this app is to be able to become friends with oth
 Technologies used:
 javascript, css, ejs, html, mongobd, mongoose, json, express
 
-Researched on google, webmd, mongoose website, shecodes, youtube, excalidraw
+Researched on google, webmdn, mongoose website, shecodes, youtube, excalidraw
+
+

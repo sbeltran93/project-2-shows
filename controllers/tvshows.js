@@ -22,9 +22,6 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res)=> {
     
       try {
-        req.body.didYouLoveIt === 'on' || req.body.isRead === true? 
-        req.body.didYouLoveIt = true :
-        req.body.didYouLoveIt = false
         req.body.rating = parseInt(req.body.rating)
         const foundUser = await User.findById(req.session.user._id)
         foundUser.showCase.push(req.body)
